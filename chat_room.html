@@ -1,0 +1,18 @@
+
+
+<button id="logout" onclick="logout();"class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
+
+<button onclike="addRoom();" class="btn btn-success">#Add Room</button>
+<input type="text" id="room_name" class="form-control" placeholder="#Room Name">
+
+<button onclike="addRoom();" class="btn btn-success">#Add Room</button>
+		<h3 class="color_white">#TRENDINGROOMS</h3>
+	<div id="output"></div>
+
+	function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
+		Room_names = childKey;
+	   //Start code
+
+	   //End code
+	   });});}
+ getData();
